@@ -7,18 +7,28 @@ from shop.models import Product
 class ProductType(DjangoObjectType):
     class Meta:
         model = Product
-        fields = "__all__"
+        description = "A product"
+        exclude = ["active"]
 
 
 class Query(graphene.ObjectType):
-    products = graphene.List(ProductType)
-    product = graphene.Field(ProductType, id=graphene.Int())
+    class Meta:
+        description = (
+            "Query object used to resolve queries with the GraphQL query language."
+        )
+
+    products = graphene.List(ProductType, description="Returns all active products.")
+    product = graphene.Field(
+        ProductType,
+        uid=graphene.UUID(),
+        description="Returns a product with the given UUID.",
+    )
 
     def resolve_products(self, info, **kwargs):
-        return Product.objects.all()
+        return Product.objects.all().filter(active=True)
 
-    def resolve_product(self, info, id):
-        return Product.objects.get(id=id)
+    def resolve_product(self, uid):
+        return Product.objects.get(uid=uid)
 
 
 schema = graphene.Schema(query=Query)
