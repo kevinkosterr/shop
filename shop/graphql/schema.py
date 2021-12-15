@@ -1,7 +1,7 @@
 import graphene
 from graphene_django import DjangoObjectType
 
-from amazonie.models import Product
+from shop.models import Product
 
 
 class ProductType(DjangoObjectType):
