@@ -1,0 +1,22 @@
+[
+  {
+    "model": "shop.product",
+    "pk": "42a46570-d2ec-46c5-b480-5afeb2e9ab2a",
+    "fields": {
+      "title": "Cheese",
+      "description": "Cheesy product.",
+      "price": 5.0,
+      "active": true
+    }
+  },
+  {
+    "model": "shop.product",
+    "pk": "4a0597e1-6b7a-4f8c-b1c8-662c4ea21180",
+    "fields": {
+      "title": "Smartphone",
+      "description": "Like a regular phone, but smarter.",
+      "price": 100.0,
+      "active": true
+    }
+  }
+]
