@@ -21,5 +21,30 @@
       "archived": false,
       "secondary_email": null
     }
+  },
+  {
+    "model": "users.shopuser",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$04vZxLqSn0ZCgPFgOBynaR$5+W9UCGWDn5U7EMiBqt9QA2xBBN7ReslDm+JflJZkOE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "johndoe",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "johndoe@example.com",
+      "is_staff": false,
+      "is_active": true
+    }
+  },
+    {
+    "model": "graphql_auth.userstatus",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "verified": true,
+      "archived": false,
+      "secondary_email": null
+    }
   }
 ]

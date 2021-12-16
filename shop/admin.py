@@ -5,7 +5,7 @@ from users.models import ShopUser
 
 
 class UserAdmin(admin.ModelAdmin):
-    readonly_fields = ["username", "email", ""]
+    readonly_fields = ["username", "email", "password"]
 
 
 class ProductAdmin(admin.ModelAdmin):
