@@ -1,6 +1,7 @@
 import graphene
 from graphene_django import DjangoObjectType
 from graphql_auth.schema import UserQuery, MeQuery
+from .mutations import Mutation
 
 from shop.models import Product
 
@@ -32,4 +33,4 @@ class Query(UserQuery, MeQuery, graphene.ObjectType):
         return Product.objects.get(uid=uid)
 
 
-schema = graphene.Schema(query=Query)
+schema = graphene.Schema(query=Query, mutation=Mutation)
