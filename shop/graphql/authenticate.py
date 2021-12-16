@@ -76,6 +76,12 @@ class GraphQLAuth:
         return resp["data"]["me"]
 
     def request_token(self, username, password):
+        """Requests a token for the user through the GraphQL backend.
+
+        :param username: username for user
+        :param password: password for user
+        :return:
+        """
         query = """
         mutation RequestAuthToken($username: String!, $password: String!){
             tokenAuth(username: $username, password: $password){
