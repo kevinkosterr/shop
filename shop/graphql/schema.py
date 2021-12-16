@@ -1,5 +1,6 @@
 import graphene
 from graphene_django import DjangoObjectType
+from graphql_auth.schema import UserQuery, MeQuery
 
 from shop.models import Product
 
@@ -11,7 +12,7 @@ class ProductType(DjangoObjectType):
         exclude = ["active"]
 
 
-class Query(graphene.ObjectType):
+class Query(UserQuery, MeQuery, graphene.ObjectType):
     class Meta:
         description = (
             "Query object used to resolve queries with the GraphQL query language."

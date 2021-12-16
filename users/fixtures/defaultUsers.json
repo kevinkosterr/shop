@@ -1,0 +1,25 @@
+[
+  {
+    "model": "users.shopuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$SvFSKaF5K6Kow5qXN334DL$auVFU925N6Kgc4R4eDaKpf9MHNjxKNHXuAPx3t50GHE=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "email": "admin@example.com",
+      "is_staff": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "graphql_auth.userstatus",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "verified": true,
+      "archived": false,
+      "secondary_email": null
+    }
+  }
+]
