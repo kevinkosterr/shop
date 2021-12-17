@@ -3,8 +3,9 @@
     "model": "shop.product",
     "pk": "42a46570-d2ec-46c5-b480-5afeb2e9ab2a",
     "fields": {
-      "title": "Cheese",
-      "description": "Cheesy product.",
+      "title": "MacBook Pro",
+      "image": "media/macbook.png",
+      "description": "MacBook Pro",
       "price": 5.0,
       "active": true
     }
@@ -13,9 +14,10 @@
     "model": "shop.product",
     "pk": "4a0597e1-6b7a-4f8c-b1c8-662c4ea21180",
     "fields": {
-      "title": "Smartphone",
-      "description": "Like a regular phone, but smarter.",
-      "price": 100.0,
+      "title": "iPhone 13 Pro",
+      "image": "media/iphone13.png",
+      "description": "iPhone 13 Pro",
+      "price": 1000.0,
       "active": true
     }
   }

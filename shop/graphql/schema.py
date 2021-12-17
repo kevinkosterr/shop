@@ -27,6 +27,7 @@ class Query(UserQuery, MeQuery, graphene.ObjectType):
     )
 
     def resolve_products(self, info, **kwargs):
+        # TODO: should handle offset and limit.
         return Product.objects.all().filter(active=True)
 
     def resolve_product(self, uid):

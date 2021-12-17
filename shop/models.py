@@ -7,6 +7,12 @@ class Product(models.Model):
     """Model for products"""
 
     uid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    image = models.ImageField(
+        blank=True,
+        null=False,
+        upload_to="media",
+        default="media/default-product-image.png",
+    )
     title = models.CharField(
         max_length=50,
         blank=False,
