@@ -1,12 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #EAEBEC;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: Roboto, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+
+    .navbar-icon{
+        @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto
+                bg-gray-800 hover:cursor-pointer bg-slate-700 rounded-2xl hover:rounded-none transition-all duration-300;
+    }
+
 }
