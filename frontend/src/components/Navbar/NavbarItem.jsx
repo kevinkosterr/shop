@@ -1,11 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const NavbarItem = ({href, text}) => {
-
-    return(
-        <a className="mr-5 hover:text-gray-900" href={href}>{text}</a>
-    )
-
+const NavbarItem = ({ href, text, status }) => {
+  return (
+    <Link
+      className={
+        status
+          ? "mr-5 hover:text-gray-900 text-gray-900 font-semibold"
+          : "mr-5 hover:text-gray-900"
+      }
+      to={href}
+    >
+      {text}
+    </Link>
+  );
 };
 
 export default NavbarItem;
